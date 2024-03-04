@@ -129,8 +129,8 @@ export default {
         if (modalForm) {
           modalForm.reset(); // Этот метод обнуляет значения полей формы
         }
-        // window.location.href = 'https://darina9.github.io/SwissTechnology_1/';
-        window.location.href = "http://127.0.0.1:5500/";
+        window.location.href = 'https://gilded-eclair-c21534.netlify.app/';
+        // window.location.href = "http://127.0.0.1:5500/";
         return false; // Предотвращаем отправку формы, так как не хотим переходить на сторонний сайт
       }
     },
