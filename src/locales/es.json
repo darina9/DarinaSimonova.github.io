@@ -1,0 +1,138 @@
+{
+  "header": {
+    "subtitle": "promotor de bienes raíces residenciales y comerciales en España",
+    "info": "Realizamos proyectos eco compatibles exitosos con un enfoque innovador y una gran experiencia ",
+    "buttonText": "Enviar solicitud"
+  },
+  "modal": {
+    "title": "Envíanos un mensaje",
+    "content": "Si tiene alguna pregunta o sugerencia de cooperación rellene el siguiente formulario",
+    "address": {
+      "title": "Addres"
+    },
+    "phone": {
+      "title": "Phone"
+    },
+    "email": {
+      "title": "Email"
+    },
+    "form": {
+      "name": "Su nombre",
+      "surname": "Su apellido",
+      "phone": "ingresa número telefónico",
+      "email": "Ingrese correo electrónico",
+      "message": "Su mensaje...",
+      "namePlaceholder": "Su nombre",
+      "surnamePlaceholder": "Su apellido",
+      "phonePlaceholder": "ingresa número telefónico",
+      "emailPlaceholder": "Ingrese correo electrónico",
+      "messagePlaceholder": "Su mensaje...",
+      "submit": "Envíe su solicitud"
+    }
+  },
+  "content": {
+    "advantages": {
+      "title": "Nuestras prioridades son - alta calidad y tecnologías innovadoras en construcción de los bienes raíces",
+      "items": [
+        {
+          "text": "Utilizamos modernos tecnología y materiales en todas las etapas de trabajos de construcción "
+        },
+        {
+          "text": "Minimizamos el impacto ambiental en la zona de construcción del objeto"
+        },
+        {
+          "text": "Tomamos en cuenta las condiciones específicas de cada territorio en particular y nos centramos en los estándares internacionales en construcción"
+        },
+        {
+          "text": "En ejecución de proyectos ofrecemos a los futuros propietarios las más atractivas condiciones de uso de los bienes raíces"
+        }
+      ]
+    },
+    "info": {
+      "top_right": {
+        "title": "terreno con un nombre bien conocido y descanso confortable en la Costa del Sol",
+        "text": "Elija apartamentos en un lugar con el clima excelente, asegúrese de que usted y su familia tengan acceso a la infraestructura excepcional, la máxima privacidad y fantásticas vistas al mar y Sierra Bermeja"
+      },
+      "bottom_left": {
+        "title": "New Golden Mile es un punto de atracción tanto para los amantes de las vacaciones de temporada como para los que buscan un lugar para la residencia permanente:"
+      }
+    },
+    "lists": {
+      "left": [
+        {
+          "text": "Casa de 29 apartamentos"
+        },
+        {
+          "text": "En el territorio se encuentra un aparcamiento cerradoг"
+        },
+        {
+          "text": "Solárium en la azotea"
+        },
+        {
+          "text": "Una piscina y un gimnasio"
+        },
+        {
+          "text": "Desde la mayoría de las terrazas se abren excelentes vistas panorámicas al mar"
+        },
+        {
+          "text": "Delante de la casa hay una área ajardinada, senderos para los ciclistas con rutas hasta el mar y el malecón"
+        }
+      ],
+      "right": [
+        {
+          "text": "500 metros hasta una playa bien cuidada - 6 minutos si anda a pie"
+        },
+        {
+          "text": "5 minutos en coche hasta el centro de Estepona, todas las ventajas de la ciudad están muy cerca"
+        },
+        {
+          "text": "50 minutos en coche hasta dos aeropuertos: Málaga y Gibraltar"
+        },
+        {
+          "text": "El lugar será atractivo para los amantes de diferentes tipos de reposo: desde el descaso en la playa tranquila hasta los deportes extremos de verano e invierno"
+        }
+      ]
+    }
+  },
+  "video": {
+    "title": "Estamos listos para brindarle un acompañamiento completo para elegir y comprar",
+    "buttonText": "Discutir condiciones"
+  },
+  "offers": {
+    "title1": "Ofrecemos Built-to-suit así como Fee Development -",
+    "title1_1": " construcción para tareas específicas",
+    "item1": "Invitamos a los interesados para la colaboración así como a los propietarios de tierra para construcción de obras residenciales y de uso comercial. Asumimos las responsabilidades del diseñador, constructor y consultor.",
+    "item2": "Invertir en bienes raíces comerciales siempre es más rentable en la etapa de construcción. Póngase en contacto si:",
+    "item3": "quiere invertir en nuestros nuevos proyectos; tiene un terreno y piensa en cómo sacar provecho de su tierra - tenemos ofertas aprobadas; tiene que construir una propiedad comercial o residencial.",
+    "buttonText1": "Invitar a la licitacion",
+    "title2": "Aumentamos el valor de terrenos. ",
+    "title2_1": "Nuestro equipo es un jugador activo en el mercado inmobiliario",
+    "buttonText2": "Discutir el proyecto"
+  },
+  "partners": {
+    "title": "Buscamos socios experimentados y contratistas para ejecutar los proyectos",
+    "item1": "Estamos abiertos para colaboración con empresas de España y Europa las que están dispuestas a participar directamente en construcción bienes raíces residenciales y comerciales y ser proveedores de materiales de construcción, equipos y ejecutores de los trabajos de construcción.",
+    "item2": "Ofrecemos condiciones ventajosas de colaboración y posibilidades para ampliar volúmenes de trabajos de construcción. Si está listo para ser nuestro socio o contratista, envíe solicitud y nuestro especialista se pondrá en contacto con usted para discutir los detalles de la cooperación.",
+    "buttonText": "Discutir condiciones"
+  },
+  "team": {
+    "title1": "Ampliamos nuestro equipo e invitamos a los profesionales",
+    "text": "Invitamos a colaborar a los mejores especialistas en la construcción, ventas y gestión. Ofrecemos excelentes condiciones de colaboración a largo plazo",
+    "title2": "Invitamos a trabajar en nuestra empresa:",
+    "position1": "Gerente de oficina",
+    "position1Description": "Un empleado que realizarГЎ todas las tareas que se le encomienden por el Directo",
+    "position2": "Jefe del equipo de construccción",
+    "position2Description": "Especialista que dirige las actividades de los trabajadores bajo su dirección en obra de construcción.",
+    "position3": "Gerente de ventas",
+    "position3Description": "Especialista en promoción de los intereses de la empresa, atracción activa de los clientes potenciales, el aumento de las ventas de bienes raí­ces, trabajo con Agencias inmobiliarias y atracción del trafico",
+    "requiredLanguages": "",
+    "buttonText": "Enviar solicitud"
+  },
+  "news": {
+    "title": "Manténgase al día con las noticias de construcción",
+    "subtitle": "Publicamos noticias sobre la construcción de nuestras obras",
+    "text": "Inicio de un nuevo proyecto!¡Inicio de un nuevo proyecto de Swiss Technology es una buena razón para compartir noticias! Iniciamos un proyecto importante para nosotros mismos: una nueva casa de 29 apartamentos en el pintoresco y prestigioso terreno de New Golden Mile. Para mediados de marzo fue completada la compra del terreno. Para el día de hoy se llevó a cabo el concurso para elegir al arquitecto del proyecto: depende de él cómo será el nuevo objeto. El especialista está trabajando en el proyecto y pronto podremos mostrar los detalles.!",
+    "readMore": "Leer todo",
+    "hide": "Colapsar"
+  }
+}

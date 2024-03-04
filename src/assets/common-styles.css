@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+body{
+    font-family: 'Inter';   
+}
+a{
+    text-decoration: none;
+}
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+.center__content{
+    padding-left: calc(50% - 420px);
+    padding-right: calc(50% - 420px); 
+}
+.title{
+    color: #3CA043;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.text{
+    color: #000;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.title-big{
+    color: #3CA043;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.list{
+    list-style-type: none;
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align:initial;    
+}
+.btn{  
+    display: flex;
+    align-items: center;      
+    color: #3CA043;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 12px 27px ;
+    border: 1px solid #3CA043;
+    background-color: #fff;
+}
+
+@media only screen and (max-width: 1439px) and (min-width:768px){
+    .center {
+        padding-left: calc(50% - 384px);
+        padding-right: calc(50% - 384px);
+    }      
+    .center__content{
+        padding-left: calc(50% - 350px);
+        padding-right: calc(50% - 350px); 
+    }
+    .btn{  
+        margin: 0 auto;        
+        text-align: center;       
+        font-size: 16px;       
+    }
+    .title{        
+        font-size: 25px;       
+    }    
+    .title-big{       
+        font-size: 29px;  
+    }
+    .list{      
+        font-size: 16px;       
+    }
+}
+@media only screen and (max-width: 767px) {
+    .center {
+        padding-left: calc(50% - 160px);
+        padding-right: calc(50% - 160px);
+    }      
+    .center__content{  
+        padding-left: calc(50% - 160px);
+        padding-right: calc(50% - 160px); 
+    }
+    .title{       
+        font-size: 18px;        
+    }    
+    .title-big{        
+        font-size: 22px;    
+    }
+    .list{
+        font-size: 14px;        
+    }       
+}

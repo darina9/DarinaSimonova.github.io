@@ -1,0 +1,140 @@
+{
+  "header": {
+    "subtitle": "A developer of residential and commercial real estate in Spain",
+    "info": "We execute successful eco-friendly projects with an innovative approach and extensive experience ",
+    "buttonText": "Submit a request"
+  },
+  "modal": {
+    "title": "Send us a message",
+    "content": "If you have any questions or suggestions for cooperation fill out the form below",
+    "address": {
+      "title": "Addres"
+    },
+    "phone": {
+      "title": "Phone"
+    },
+    "email": {
+      "title": "Email"
+    },
+    "form": {
+      "name": "Your name",
+      "surname": "Your surname",
+      "phone": "Enter your phone number",
+      "email": "Enter email",
+      "message": "Your message...",
+      "namePlaceholder": "Your name",
+      "surnamePlaceholder": "Your surname",
+      "phonePlaceholder": "Enter your phone number",
+      "emailPlaceholder": "Enter email",
+      "messagePlaceholder": "Your message...",
+      "submit": "Send a message"
+    }
+  },
+  "content": {
+    "advantages": {
+      "title": "Our choice - is high-quality and innovative technologies in the construction of facilities объектов",
+      "items": [
+        {
+          "text": "We use modern technologies and materials at all stages of construction work"
+        },
+        {
+          "text": "We use modern technologies and materials at all stages of construction work."
+        },
+        {
+          "text": "We take into account the specifics of a particular area and adhere to global standards in construction"
+        },
+        {
+          "text": "We take into account the specifics of a particular area and adhere to global standards in construction"
+        }
+      ]
+    },
+    "info": {
+      "top_right": {
+        "title": "Discover the New Golden Mile, an exclusive and comfortable retreat along the sun-kissed shores of Costa Del Sol",
+        "text": "Choose apartments in a location boasting a superb climate, ensuring you and your family have access to prestigious infrastructure, maximum privacy, and fantastic views of both the sea and Sierra Bermeja mountains"
+      },
+      "bottom_left": {
+        "title": "The New Golden Mile serves as an appealing locale for both seasonal holidaymakers and individuals in search of a permanent home:"
+      }
+    },
+    "lists": {
+      "left": [
+        {
+          "text": "A building with 29 apartments"
+        },
+        {
+          "text": "Underground parkingг"
+        },
+        {
+          "text": "Rooftop solarium"
+        },
+        {
+          "text": "Swimming pool, and gym on-site"
+        },
+        {
+          "text": "Most terraces offer stunning sea views"
+        },
+        {
+          "text": "Well-maintained green space in front of the building, bike paths leading to the sea and promenade"
+        }
+      ],
+      "right": [
+        {
+          "text": "500 meters to a pristine beach, just a 6-minute walk"
+        },
+        {
+          "text": "5 minutes by car to Estepona's city center, with all urban conveniences close by"
+        },
+        {
+          "text": "50 minutes' drive to two airports: Malaga and Gibraltar"
+        },
+        {
+          "text": "The location caters to diverse leisure activities, from relaxing beach vacations to thrilling summer and winter sports"
+        }
+      ]
+    }
+  },
+  "video": {
+    "title": "We are ready to provide comprehensive support throughout the selection and purchase process",
+    "buttonText": "Discuss Terms"
+  },
+  "offers": {
+    "title1": "We offer Built-to-Suit and Fee Development",
+    "title1_1": "services tailored to your specific needs",
+    "item1": "We invite landowners to collaborate on residential and commercial construction projects. Taking on the responsibilities of a designer, developer, and consultant.",
+    "item2": "Investing in commercial real estate is always more advantageous during the construction phase. Get in touch if:",
+    "item3": "You want to invest in our new projects; You have land and are considering how to profit from it – we have proven options;You need to construct a commercial or residential property.",
+    "buttonText1": "Contact Us",
+    "title2": "Enhancing the value of land parcels. ",
+    "title2_1": " Our team is an active player in the real estate market",
+    "buttonText2": "Discuss Terms"
+  },
+  "partners": {
+    "title": "Seeking experienced partners and contractors for project implementation",
+    "item1": "We collaborate with companies from Spain and Europe that are ready to take an active role in the construction of residential and commercial properties, as well as serve as suppliers of building materials, tools, and construction services.",
+    "item2": "We offer favorable cooperation terms and the opportunity to expand your project portfolio. If you are prepared to become our partner or contractor, please submit an application, and our specialist will contact you to discuss the details of our collaboration.",
+    "buttonText": "Submit application"
+  },
+  "team": {
+    "title1": "Expanding our team and inviting professionals to join us",
+    "text": "We are looking to collaborate with top experts in the fields of construction, sales, and management. We offer excellent long-term partnership conditions.",
+    "title2": "We are inviting the following professionals to join our company:",
+    "position1": "Office Manager",
+    "position1Description": "A team member who fulfills all assignments and tasks assigned by their supervisor",
+    "position2": "Construction Crew Supervisor",
+    "position2Description": "A specialist who manages the activities of the workers entrusted to them on construction sites",
+    "position3": "Sales Department Manager",
+    "position3Description": "A professional who promotes the company's interests, actively attracts potential clients, increases property sales, works with real estate agencies, and generates traffic",
+    "requiredLanguages": "",
+    "buttonText": "Submit Application"
+  },
+  
+    "news": {
+      "title": "Stay updated on construction news",
+      "subtitle": "We publish news about the progress of our construction projects",
+      "text": "New Project Launch! The commencement of a new project by Swiss Technology is the perfect occasion to share some news! We are launching a significant project: a new building with 29 apartments in the picturesque and prestigious New Golden Mile location. As of mid-March, the land purchase deal has been closed. At present, a competition has been conducted to select the project's architect - the final appearance of the new building depends on their vision. The specialist is working on the project, and we will soon reveal the details. Stay tuned for updates!",
+      "readMore": "Read More",
+      "hide": "Hide"
+    
+  }
+}
