@@ -1,30 +1,32 @@
 <template>
   <div>
-    <div id="feedbackModal" class="modal-background" v-if="modalVisible " >
+    <div id="feedbackModal" class="modal-background" v-if="modalVisible">
       <p>{{ modalVisible }}</p>
       <div class="modal">
         <div class="modal-text center__content">
-          <h2 class="modal-title title">{{ $t('modal.title') }}</h2>
+          <h2 class="modal-title title">{{ $t("modal.title") }}</h2>
           <p>
-            {{ $t('modal.content') }}
+            {{ $t("modal.content") }}
           </p>
         </div>
         <div class="modal-container">
           <div class="modal-info">
             <ul class="modal-info_list list footer-text">
               <li class="modal-info_item">
-                <h3 class="modal-info_title">{{ $t('modal.address.title') }}</h3>
+                <h3 class="modal-info_title">
+                  {{ $t("modal.address.title") }}
+                </h3>
                 <p class="modal-info_text">
                   Swiss Technology S.L. B72850266<br />
                   Poligono Nueva Campana, 26
                 </p>
               </li>
               <li class="modal-info_item">
-                <h3 class="modal-info_title">{{ $t('modal.phone.title') }}</h3>
+                <h3 class="modal-info_title">{{ $t("modal.phone.title") }}</h3>
                 <p class="modal-info_text">+41 788 398 537</p>
               </li>
               <li class="modal-info_item">
-                <h3 class="modal-info_title">{{ $t('modal.email.title') }}</h3>
+                <h3 class="modal-info_title">{{ $t("modal.email.title") }}</h3>
                 <p class="modal-info_text">email: info@swisstechnology.es</p>
               </li>
             </ul>
@@ -32,7 +34,9 @@
           <span class="close-btn" @click="closeModal">X</span>
           <form @submit.prevent="submitForm" class="modal-form">
             <div class="modal-column">
-              <label for="yourName" class="visually-hidden">{{ $t('modal.form.name') }}</label>
+              <label for="yourName" class="visually-hidden">{{
+                $t("modal.form.name")
+              }}</label>
               <input
                 type="text"
                 id="yourName"
@@ -40,9 +44,9 @@
                 :placeholder="$t('modal.form.namePlaceholder')"
                 required
               />
-              <label for="yourSurname" class="visually-hidden"
-                >{{ $t('modal.form.surname') }}</label
-              >
+              <label for="yourSurname" class="visually-hidden">{{
+                $t("modal.form.surname")
+              }}</label>
               <input
                 type="text"
                 id="yourSurname"
@@ -50,7 +54,9 @@
                 :placeholder="$t('modal.form.surnamePlaceholder')"
                 required
               />
-              <label for="yourPhone" class="visually-hidden">{{ $t('modal.form.phone') }}</label>
+              <label for="yourPhone" class="visually-hidden">{{
+                $t("modal.form.phone")
+              }}</label>
               <input
                 type="text"
                 id="yourPhone"
@@ -58,7 +64,9 @@
                 :placeholder="$t('modal.form.phonePlaceholder')"
                 required
               />
-              <label for="yourEmail" class="visually-hidden">{{ $t('modal.form.email') }}</label>
+              <label for="yourEmail" class="visually-hidden">{{
+                $t("modal.form.email")
+              }}</label>
               <input
                 type="email"
                 id="yourEmail"
@@ -66,9 +74,9 @@
                 :placeholder="$t('modal.form.emailPlaceholder')"
                 required
               />
-              <label for="yourMessage" class="visually-hidden"
-                >{{ $t('modal.form.message') }}</label
-              >
+              <label for="yourMessage" class="visually-hidden">{{
+                $t("modal.form.message")
+              }}</label>
               <textarea
                 id="yourMessage"
                 v-model="formData.yourMessage"
@@ -76,24 +84,24 @@
                 required
               ></textarea>
             </div>
-            <button type="submit" class="submit-btn">{{ $t('modal.form.submit') }}</button>
+            <button type="submit" class="submit-btn">
+              {{ $t("modal.form.submit") }}
+            </button>
           </form>
-         
+
           <div id="warningContainer">{{ warningMessage }}</div>
         </div>
       </div>
     </div>
-    
-     
   </div>
 </template>
 
 <script>
 export default {
-  props: ["modalVisible","currentLanguage"],
+  props: ["modalVisible", "currentLanguage"], // Принимаемые свойства: modalVisible и currentLanguage
   data() {
     return {
-      visible: this.modalVisible,
+      visible: this.modalVisible, // Состояние видимости модального окна
       formData: {
         yourName: "",
         yourSurname: "",
@@ -102,16 +110,16 @@ export default {
         yourMessage: "",
       },
       warningMessage: "",
-      formSubmitted: false,
+      formSubmitted: false, // Флаг, указывающий на успешную отправку формы
       formUrl: "https://formspree.io/f/xrgngyko",
-       
     };
   },
   methods: {
-   
+    // Валидация формы перед отправкой
     validateForm() {
       const inputs = this.$el.querySelectorAll(".modal-form input:required");
       let allFieldsFilled = true;
+      // Проверка каждого обязательного поля на заполнение
       inputs.forEach((input) => {
         if (input.value.trim() === "") {
           allFieldsFilled = false;
@@ -121,19 +129,20 @@ export default {
         }
       });
       if (!allFieldsFilled) {
-        // Если есть незаполненные поля, можете добавить здесь дополнительную логику обработки
         return false; // Предотвращаем отправку формы в случае ошибки
       } else {
-        // Здесь можете добавить логику отправки данных формы
+        // Очистка полей формы после отправки
         const modalForm = this.$el.querySelector(".modal-form");
         if (modalForm) {
-          modalForm.reset(); // Этот метод обнуляет значения полей формы
+          modalForm.reset();
         }
-        window.location.href = 'https://swisstecnology.netlify.app/';
+        // Перенаправление на указанный URL адрес
+        window.location.href = "https://swisstecnology.netlify.app/";
         // window.location.href = "http://127.0.0.1:5500/";
         return false; // Предотвращаем отправку формы, так как не хотим переходить на сторонний сайт
       }
     },
+    // Открытие модального окна
     openModal() {
       const feedbackModal = this.$el.querySelector("#feedbackModal");
       if (feedbackModal) {
@@ -143,69 +152,52 @@ export default {
         }, 100);
       }
     },
+    // Отправка данных формы
     submitForm() {
-      // Отправка данных формы через Formspree
-      // Поменяйте "https://formspree.io/f/xrgngyko" на URL вашей формы в Formspree
       const formUrl = "https://formspree.io/f/xrgngyko";
-      
+
       // Отправка данных формы с помощью AJAX
       fetch(formUrl, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(this.formData)
+        body: JSON.stringify(this.formData),
       })
-        .then(response => {
+        .then((response) => {
           if (!response.ok) {
             throw new Error("Ошибка при отправке формы");
           }
           return response.json();
         })
-        .then(() =>{
+        .then(() => {
           // Обработка успешной отправки формы
           this.formSubmitted = true;
-          this.closeModal();       
-        
+          this.closeModal();
         })
-      
-        .catch(error => {
+
+        .catch((error) => {
           // Обработка ошибки при отправке формы
           console.error("Ошибка при отправке формы:", error.message);
-          // Можете добавить здесь логику для вывода сообщения об ошибке отправки формы
         });
-        
-      },
+    },
+    // Закрытие модального окна
     closeModal() {
       const modal = this.$el.querySelector("#feedbackModal");
       if (modal) {
         modal.classList.remove("modal-open");
         setTimeout(() => {
           modal.style.display = "none";
-    }, 300);
-  }
-  // Изменяем локальное состояние компонента
+        }, 300);
+      }
+      // Изменяем локальное состояние компонента
       this.isVisible = false;
-  // Эмитируем событие для оповещения родительского компонента
+      // Эмитируем событие для оповещения родительского компонента
       this.$emit("update:modalVisible", this.isVisible);
-},
-    // validate(event) {
-    //   const phoneInput = this.$el.querySelector('#yourPhone');
-    //   const inputValue = phoneInput.value;
-    //   // Очищаем номер телефона от всего, кроме цифр
-    //   const cleanedValue = inputValue.replace(/\D/g, '');
-    //   // Форматируем номер телефона
-    //   const formattedValue = this.formatPhoneNumber(cleanedValue);
-    //   // Устанавливаем отформатированное значение обратно в поле ввода
-    //   phoneInput.value = formattedValue;
-    // },
-    formatPhoneNumber(value) {
-      // Здесь можете реализовать логику форматирования номера телефона
-      // В примере просто возвращаем введенное значение без изменений
-      return value;
     },
   },
   mounted() {
+    // Подключение обработчика события клика для кнопки "Отправить"
     const submitBtn = this.$el.querySelector(".submit-btn");
     if (submitBtn) {
       submitBtn.addEventListener("click", (event) => {
@@ -236,7 +228,6 @@ export default {
   justify-content: center;
   align-items: center;
   z-index: 10;
-
   transition: opacity 0.5s ease;
 }
 #feedbackModal.modal-open {
@@ -247,7 +238,6 @@ export default {
   display: flex;
   gap: 160px;
 }
-/* Стили для модального окна */
 .modal {
   background: #fff;
   width: 1200px;
@@ -274,14 +264,12 @@ export default {
 .modal-info_item {
   margin-top: 60px;
 }
-/* Стили для кнопки закрытия */
 .close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
 }
-/* Стили для формы в модальном окне */
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -291,10 +279,10 @@ export default {
   margin-top: 20px;
 }
 .modal-form input:required {
-  border: 1px solid #ccc; /* Устанавливаем стандартный стиль для обязательных полей */
+  border: 1px solid #ccc;
 }
 .modal-form input:required:invalid {
-  border: 1px solid red; /* Устанавливаем стиль для обязательных полей с неверными значениями */
+  border: 1px solid red;
 }
 .modal-column {
   width: 100%;
@@ -315,7 +303,6 @@ textarea {
   border: none;
   background: #f0f1f8;
 }
-/* Стили для половины кнопки отправить */
 .submit-btn {
   border: none;
   margin-top: 20px;
@@ -334,9 +321,8 @@ textarea {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-
 @media only screen and (max-width: 1439px) and (min-width: 768px) {
-  .modal{
+  .modal {
     margin-left: -25px;
   }
   .modal-container {
