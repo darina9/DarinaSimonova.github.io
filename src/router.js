@@ -7,6 +7,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {
+    // Маршрут для главной страницы 
     path: '/',
     name: 'MainPage',
     component: MainPage
