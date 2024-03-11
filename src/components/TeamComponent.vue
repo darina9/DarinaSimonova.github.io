@@ -66,62 +66,49 @@
   
   <script>
 export default {
-  
   data() {
     return {
-      // teamItems: [
-      //   {
-      //     title: this.$t("team.position1"),
-      //     description: this.$t("team.position1Description"),
-      //   },
-      //   {
-      //     title: this.$t("team.position2"),
-      //     description: this.$t("team.position2Description"),
-      //   },
-      //   {
-      //     title: this.$t("team.position3"),
-      //     description:
-      //     this.$t('team.position3Description'),
-      //   },
-      // ],
-      teamItems: [],
-      currentIndex: 0,
+      teamItems: [], // Массив элементов
+      currentIndex: 0, // Текущий индекс элемента в карусели
     };
   },
   methods: {
-    
+    // Метод для вызова события открытия модального окна
     openModal() {
       this.$emit("openModal");
     },
+    // Метод для перемещения на следующий элемент карусели
     moveToNext() {
       this.currentIndex = (this.currentIndex + 1) % this.teamItems.length;
       this.updateCarousel();
     },
+    // Метод для перемещения на предыдущий элемент карусели
     moveToPrev() {
       this.currentIndex =
         (this.currentIndex - 1 + this.teamItems.length) % this.teamItems.length;
       this.updateCarousel();
     },
+    // Метод для обновления внешнего вида карусели
     updateCarousel() {
+      // Определение ширины слайда в зависимости от ширины окна браузера
       const windowWidth = window.innerWidth;
       let slideWidth;
 
       if (windowWidth >= 1440) {
-        slideWidth = 260; // 250px for each slide + 10px margin
+        slideWidth = 260;
       } else if (windowWidth >= 768 && windowWidth <= 1439) {
-        slideWidth = 233; // 227px for each slide + 6px margin
+        slideWidth = 233;
       } else {
-        slideWidth = 320; // Only 227px for each slide
+        slideWidth = 320;
       }
-
+      // Вычисление значения смещения для карусели
       const translateValue = -this.currentIndex * slideWidth;
       this.$refs.carousel.style.transform = `translateX(${translateValue}px)`;
     },
+    // Метод для загрузки контента в зависимости от выбранного языка
     loadContent() {
-      
       switch (this.$i18n.locale) {
         case "ru":
-        console.log('Loading content for Russian language');
           this.teamItems = [
             {
               title: this.$t("team.position1"),
@@ -138,7 +125,6 @@ export default {
           ];
           break;
         case "en":
-        console.log('Loading content for English language');
           this.teamItems = [
             {
               title: this.$t("team.position1"),
@@ -155,7 +141,6 @@ export default {
           ];
           break;
         case "es":
-        console.log('Loading content for Spanish language');
           this.teamItems = [
             {
               title: this.$t("team.position1"),
@@ -172,22 +157,19 @@ export default {
           ];
           break;
         default:
-        console.log('Language not recognized');
           this.teamItems = [];
       }
-    
     },
   },
   mounted() {
-    console.log('mounted method called');
-    this.updateCarousel();
-    window.addEventListener("resize", this.updateCarousel);
-    this.loadContent();
-    this.$root.$on('languageChanged', this.loadContent);
+    this.updateCarousel(); // Инициализация карусели при загрузке компонента
+    window.addEventListener("resize", this.updateCarousel); // Обновление карусели при изменении размеров окна
+    this.loadContent(); // Загрузка контента при монтировании компонента
+    this.$root.$on("languageChanged", this.loadContent); // Подписка на событие изменения языка
   },
   destroyed() {
-    window.removeEventListener("resize", this.updateCarousel);
-    this.$root.$off('languageChanged', this.loadContent);
+    window.removeEventListener("resize", this.updateCarousel); // Удаление обработчика при уничтожении компонента
+    this.$root.$off("languageChanged", this.loadContent); // Отписка от события изменения языка
   },
 };
 </script>
@@ -331,10 +313,10 @@ export default {
   .prev-btn {
     left: 20px;
   }
-  .next-btn{
+  .next-btn {
     right: 20px;
   }
-  .block-text{
+  .block-text {
     text-align: center;
   }
   .block-title {
