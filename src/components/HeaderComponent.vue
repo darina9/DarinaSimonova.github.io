@@ -88,17 +88,23 @@
 export default {
   data() {
     return {
-      currentLanguage: "ru", 
+      // Инициализируем текущий язык по умолчанию как "ru"
+      currentLanguage: "ru",
     };
   },
   mounted() {
+    // При монтировании компонента проверяем, существует ли ссылка на дочерний компонент contentComponent
     if (this.$refs.contentComponent) {
+      // Если ссылка существует, вызываем метод loadContent() из дочернего компонента
       this.$refs.contentComponent.loadContent();
     }
   },
   methods: {
+    // Методы для переключения языка
     switchToEnglish() {
+      // Вызываем метод switchLocale с передачей аргумента "en" для смены языка на английский
       this.switchLocale("en");
+      // Обновляем значение текущего языка
       this.currentLanguage = "en";
     },
     switchToSpanish() {
@@ -110,18 +116,21 @@ export default {
       this.currentLanguage = "ru";
     },
     switchLocale(locale) {
+      // Проверяем, совпадает ли выбранный язык с текущим языком
       if (this.$i18n.locale === locale) {
         return; // Игнорируем переход, если выбранный язык уже текущий
       }
 
       // Изменяем текущий язык в i18n
       this.$i18n.locale = locale;
+      // Вызываем мутацию для изменения текущего языка в хранилище Vuex
       this.$store.dispatch("setLanguage", locale).then(() => {
         // После того, как мутация отработает, вызываем метод loadContent()
         if (this.$refs.contentComponent) {
           this.$refs.contentComponent.loadContent();
         }
       });
+      // Эмиттируем событие changeLanguage с передачей выбранного языка
       this.$emit("changeLanguage", locale);
     },
     openModal() {
@@ -133,7 +142,7 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 @import url("@/assets/common-styles.css");
 .header-content {
@@ -219,9 +228,8 @@ export default {
   color: #3ca043;
 }
 .language__item_text.active {
-  color: #3ca043; /* Зеленый цвет */
-  font-weight: bold; /* Жирный шрифт для подчеркивания активности */
-  /* Дополнительные стили, если нужно */
+  color: #3ca043;
+  font-weight: bold;
 }
 .language__item_text {
   color: #9e9e9e;
