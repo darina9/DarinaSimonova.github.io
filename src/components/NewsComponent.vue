@@ -1,5 +1,4 @@
-
-  <template>
+<template>
   <section class="content__news center__content">
     <h2 class="news-title title-big">{{ $t("news.title") }}</h2>
     <p class="news-text list">
@@ -11,7 +10,6 @@
         :id="newsId"
         :style="{ maxHeight: isExpanded ? 'unset' : '3em' }"
       >
-        >
         <p class="window-date">{{ news.date }}</p>
         <p class="window-text text">{{ $t("news.text") }}</p>
       </div>
@@ -30,15 +28,18 @@ export default {
       news: {
         date: "25.01.2024",
       },
+      // Флаг, указывающий на раскрытое или скрытое состояние текста новости
       isExpanded: false,
     };
   },
   computed: {
+    // Вычисляемое свойство для определения текста кнопки в зависимости от состояния isExpanded
     buttonText() {
       return this.isExpanded ? this.$t("news.hide") : this.$t("news.readMore");
     },
   },
   methods: {
+    // Метод для переключения состояния isExpanded при клике на кнопку
     toggleText() {
       this.isExpanded = !this.isExpanded;
     },
@@ -72,18 +73,18 @@ export default {
   margin-top: 35px;
   border: 1px solid #3ca043;
   padding: 25px 30px 35px;
-  position: relative; /* Для позиционирования кнопки */
-  overflow: hidden; /* Скрытие содержимого, выходящего за пределы блока */
+  position: relative;
+  overflow: hidden;
   transition: height 0.5s ease;
 }
 .window__btn {
-  display: block; /* Переводим кнопку в блочный элемент */
-  position: absolute; /* Абсолютное позиционирование */
-  bottom: 10px; /* Отступ снизу */
-  left: 50%; /* Положение по центру */
-  transform: translateX(-50%); /* Центрирование */
-  width: 150px; /* Фиксированная ширина кнопки */
-  height: 40px; /* Фиксированная высота кнопки */
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 40px;
 }
 .window-text {
   overflow: hidden;
@@ -93,7 +94,6 @@ export default {
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
-
 @media only screen and (max-width: 767px) {
   .news-text {
     margin: 14px 10px;
@@ -104,4 +104,5 @@ export default {
   }
 }
 </style>
+  
   
