@@ -107,11 +107,7 @@ import enContent from "../locales/en.json";
 import ruContent from "../locales/ru.json";
 import esContent from "../locales/es.json";
 
-
-
 export default {
-  
-
   data() {
     return {
       AdvantagesItem: null,
@@ -122,24 +118,26 @@ export default {
 
   computed: {
     currentLanguage() {
-      return this.$store.state.currentLanguage;
+      return this.$store.state.currentLanguage; // Используемая переменная хранится в глобальном хранилище
     },
   },
   watch: {
-    currentLanguage: "loadContent",
+    // Следим за изменениями текущего языка и вызываем метод loadContent при изменении
+    currentLanguage: "loadContent", // При изменении currentLanguage вызываем метод loadContent
   },
 
   mounted() {
+    // После монтирования компонента, если есть текущий язык, загружаем контент
     if (this.currentLanguage) {
       this.loadContent(); // Вызываем loadContent() после создания компонента
     }
   },
 
   methods: {
+    // Метод для загрузки контента в зависимости от текущего языка
     loadContent() {
       if (this.currentLanguage) {
-        
-
+        // Получаем данные иконок из объекта icons
         const iconsDataAdvantages = icons.icons.AdvantagesItem;
         const iconsDataLeft = icons.icons.ListItemLeft;
         const iconsDataRight = icons.icons.ListItemRight;
@@ -163,11 +161,8 @@ export default {
             descriptionsLeft = esContent.content.lists.left;
             descriptionsRight = esContent.content.lists.right;
             break;
-         
         }
-
-       
-
+        // Маппим данные иконок и описаний в соответствующие массивы данных
         this.AdvantagesItem = iconsDataAdvantages.map((icon, index) => {
           return {
             svgClass: icon.svgClass,
@@ -385,9 +380,8 @@ export default {
     width: 384px;
   }
   .content__info_bottom-right {
-   width: 384px;
-   margin-left : 32px;
-    
+    width: 384px;
+    margin-left: 32px;
   }
   .img_bottom-right {
     max-width: 380px;
